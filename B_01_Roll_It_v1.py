@@ -1,10 +1,11 @@
-# functions go here
+# functions go here\
 
 def yes_no(question):
 
     """Checks user response to a question is yes / no (y/n), returns 'yes' or 'no' """
 
     while True:
+
         response = input(question).lower()
 
         # check the user says yes / no
@@ -26,7 +27,7 @@ Roll the dice and try to win!
     """)
 
 
-def int_checker():
+def int_check():
     """Checks users enter an integer greater than or equal to 13"""
 
     error = "Please enter an integer greater than or equal to 13"
@@ -45,16 +46,15 @@ def int_checker():
         except ValueError:
             print(error)
 
-
 # Main routine
 
-# ask the user if they want instructions (yes/no)
+#ask the user if they want instructions (check they say yes / no)
 want_instructions = yes_no("Do you want to see the instructions? ")
 
-# Display the instructions if the user wants to see them...
+# Display the instructions if they want to see them...
 if want_instructions == "yes":
     instructions()
 
 print()
-game_goal = int_checker()
+game_goal = int_check()
 print(game_goal)
